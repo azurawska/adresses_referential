@@ -6,9 +6,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.projet.model.Country;
+import com.projet.model.Language;
 
-public class CountryDAO implements ICountryDAO {
+public class LanguageDAO implements ILanguageDAO {
 	
 	private SessionFactory sessionFactory;
 
@@ -21,12 +21,12 @@ public class CountryDAO implements ICountryDAO {
 	}
 
 	@Transactional
-	public List<Country> recupererListePays() {
+	public List<Language> recupererListeLangages() {
 		
 		Session session = sessionFactory.getCurrentSession();
 		
-		List<Country> countryList = session.createQuery("from Country").list();
+		List<Language> listLanguage = session.createQuery("from Language").list();
 	
-		return countryList;
+		return listLanguage;
 	}
 }

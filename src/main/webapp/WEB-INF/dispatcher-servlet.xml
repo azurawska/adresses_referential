@@ -43,6 +43,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.projet.model.Country</value>
+                <value>com.projet.model.Language</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -59,6 +60,14 @@
     
   <bean id="countryDao" class="com.projet.dao.CountryDAO">
         <property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+  
+  <bean id="languageService" class="com.projet.service.LanguageService">
+      <property name="languageDAO" ref="languageDAO"/>
+  </bean>
+  
+  <bean id="languageDAO" class="com.projet.dao.LanguageDAO">
+      <property name="sessionFactory" ref="sessionFactory"/>
   </bean>
  
 </beans>
