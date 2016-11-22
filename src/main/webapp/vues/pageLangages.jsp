@@ -30,5 +30,6 @@
 		</tbody>
 	</table>
 
+<p><a href="index">Retour</a></p>
 </body>
 </html>

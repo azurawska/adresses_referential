@@ -44,6 +44,8 @@
             <list>
                 <value>com.projet.model.Country</value>
                 <value>com.projet.model.Language</value>
+                <value>com.projet.model.Area</value>
+                <value>com.projet.model.City</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -67,6 +69,22 @@
   </bean>
   
   <bean id="languageDAO" class="com.projet.dao.LanguageDAO">
+      <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  
+  <bean id="areaService" class="com.projet.service.AreaService">
+      <property name="areaDAO" ref="areaDAO"/>
+  </bean>
+  
+  <bean id="areaDAO" class="com.projet.dao.AreaDAO">
+      <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  
+  <bean id="cityService" class="com.projet.service.CityService">
+      <property name="cityDAO" ref="cityDAO"/>
+  </bean>
+  
+  <bean id="cityDAO" class="com.projet.dao.CityDAO">
       <property name="sessionFactory" ref="sessionFactory"/>
   </bean>
  
