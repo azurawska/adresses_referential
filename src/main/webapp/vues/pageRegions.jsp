@@ -25,8 +25,8 @@
 				<tr>
 					<td><c:out value="${area.idArea}"/></td>
 					<td><c:out value="${area.areaLabel}"/></td>
-					<td><c:out value="${area.country}"/></td>
-					<td><c:out value="${area.language}"/></td>
+					<td><c:out value="${area.country.idCountry}"/></td>
+					<td><c:out value="${area.language.idLangage}"/></td>
 				</tr>
 			</c:forEach>
 		</tbody>

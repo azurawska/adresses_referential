@@ -23,7 +23,7 @@
 			<c:forEach items="${listCity}" var="city">
 				<tr>
 					<td><c:out value="${city.idCity}"/></td>
-					<td><c:out value="${city.area}"/></td>
+					<td><c:out value="${city.area.idArea}"/></td>
 					<td><c:out value="${city.refcode}"/></td>
 					<td><c:out value="${city.cityName}"/></td>
 				</tr>
