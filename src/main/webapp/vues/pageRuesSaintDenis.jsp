@@ -5,28 +5,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Page villes</title>
+<title>Page rues Saint-Denis</title>
 <link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 </head>
 <body>
-<h3>Liste des villes</h3>
+
+<h3>Liste des rues de Saint-Denis</h3>
 
 <table border="1">
 		<thead>
 			<tr>
-				<th>Identifiant</th>
-				<th>Identifiant de région</th>
-				<th>Refcode</th>
-				<th>Nom</th>
+				<th>Identifiant de la rue</th>
+				<th>Identifiant de la ville</th>
+				<th>Nom complet de la rue</th>
+				<th>Nom abrégé de la rue</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${listCity}" var="city">
+			<c:forEach items="${listStreet}" var="street">
 				<tr>
-					<td><c:out value="${city.idCity}"/></td>
-					<td><c:out value="${city.area.idArea}"/></td>
-					<td><c:out value="${city.refcode}"/></td>
-					<td><c:out value="${city.cityName}"/></td>
+					<td><c:out value="${street.idStreetName}"/></td>
+					<td><c:out value="${street.city.idCity}"/></td>
+					<td><c:out value="${street.streetNameLabel}"/></td>
+					<td><c:out value="${street.streetNameLabelLight}"/></td>
 				</tr>
 			</c:forEach>
 		</tbody>

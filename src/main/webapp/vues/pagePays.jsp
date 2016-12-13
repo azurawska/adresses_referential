@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Page pays</title>
+<link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
 		</tbody>
 	</table>
 	
-	<p><a href="index">Retour</a></p>
+	<p><a href="index.jsp">Retour</a></p>
 
 </body>
 </html>

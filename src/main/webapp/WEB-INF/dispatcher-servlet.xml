@@ -23,6 +23,12 @@
             <value>.jsp</value>
         </property>
     </bean>
+    
+    <mvc:resources mapping="/resources/**" location="/resources"
+	cache-period="31556926"/>
+
+    <mvc:annotation-driven />
+    
       <!-- Déclaration de l'utilisation de la ressource dbcp pour l’accès à la BDD -->
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
      	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -46,6 +52,7 @@
                 <value>com.projet.model.Language</value>
                 <value>com.projet.model.Area</value>
                 <value>com.projet.model.City</value>
+                <value>com.projet.model.Street</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -85,6 +92,14 @@
   </bean>
   
   <bean id="cityDAO" class="com.projet.dao.CityDAO">
+      <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  
+  <bean id="streetService" class="com.projet.service.StreetService">
+      <property name="streetDAO" ref="streetDAO"/>
+  </bean>
+  
+  <bean id="streetDAO" class="com.projet.dao.StreetDAO">
       <property name="sessionFactory" ref="sessionFactory"/>
   </bean>
  
